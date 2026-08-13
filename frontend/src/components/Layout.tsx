@@ -16,10 +16,7 @@ export const Layout = () => {
 
   return (
     <>
-      <video className="video-background" autoPlay loop muted playsInline>
-        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4" />
-      </video>
-      <div className="video-overlay" />
+      <div className="video-overlay" style={{ background: '#0a0a0a' }} />
       
       <div className="app-layout">
         <nav className="glass-nav">
