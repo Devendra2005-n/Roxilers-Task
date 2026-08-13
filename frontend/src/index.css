@@ -1,0 +1,163 @@
+:root {
+  --color-primary: #ff0033; /* Neon Red */
+  --color-primary-hover: #cc0029;
+  --color-neutral-900: #ffffff; 
+  --color-neutral-500: #888888;
+  --color-surface: #000000; 
+  --color-bg: #000000;
+  --color-border: rgba(255, 255, 255, 0.15); 
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-star: #ffffff;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-neutral-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { 
+  font-weight: 700; 
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--color-neutral-900);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* Cinematic Panels */
+.glass-panel {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+
+.glass-nav {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.6) contrast(1.2);
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.8) 100%);
+  z-index: -1;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons & Inputs */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+}
+.btn:hover {
+  background: var(--color-primary);
+  color: #000;
+}
+.input-glass {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  color: white !important;
+  border-radius: 0 !important;
+  transition: all 0.3s ease;
+  padding: 0.875rem 0 !important;
+}
+.input-glass.with-icon {
+  padding-left: 2.5rem !important;
+}
+.input-glass:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: none !important;
+  outline: none;
+}
+.input-glass::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Tables */
+.glass-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.glass-table th {
+  background: transparent;
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid var(--color-border);
+  color: var(--color-neutral-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+.glass-table td {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-neutral-900);
+}
