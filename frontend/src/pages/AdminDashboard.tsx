@@ -181,7 +181,7 @@ export const AdminDashboard = () => {
                 <td style={{ color: '#cbd5e1' }}>{activeTab === 'users' ? item.email : item.address}</td>
                 <td>
                   {activeTab === 'users' 
-                    ? <span style={{ background: 'rgba(255,255,255,0.1)', padding: '4px 10px', borderRadius: '12px', fontSize: '0.85rem' }}>{item.role.replace('_', ' ')}</span> 
+                    ? <span style={{ background: 'rgba(255,255,255,0.1)', padding: '4px 10px', borderRadius: '12px', fontSize: '0.85rem' }}>{item.role?.replace('_', ' ') || 'N/A'}</span> 
                     : <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Star size={16} fill="var(--color-star)" color="var(--color-star)" /> {item.averageRating?.toFixed(1) || 0} ({item.totalRatings || 0})</span>
                   }
                 </td>
