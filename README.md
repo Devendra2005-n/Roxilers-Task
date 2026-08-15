@@ -1,5 +1,5 @@
 Live At :- https://roxilers-task.vercel.app/login
-
+*** On login Page it takes some time pls wait 2 to 3 mins on login page ***
 
 # Neon Rated Store
 
